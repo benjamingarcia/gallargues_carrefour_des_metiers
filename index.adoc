@@ -1,4 +1,5 @@
 = Ingénieur Développeur
+Benjamin Garcia <benjamin.garcia@zendesk.com>
 :imagesdir: images
 :source-highlighter: highlightjs
 //beige, black, league, night, serif, simple, sky, solarized, white
@@ -9,18 +10,19 @@
 :revealjs_slideNumber: true
 :customcss: custom.css
 
-== Benjamin Garcia
 
-=== Formation icon:school[]
+== Formation icon:school[]
 
+[%step]
 * BAC électronique
 * BTS électronique
-* BAC IRIS
+* BTS IRIS
 * Licence informatique
 * Master informatique
 
-=== Expérience icon:building[]
+== Expérience icon:building[]
 
+[%step]
 * Esii 
 * Geomatys 
 * Acelys 
@@ -32,6 +34,6 @@
 
 image::Zendesk.png[size=contain]
 
-=== Question 
+== Question 
 
 
