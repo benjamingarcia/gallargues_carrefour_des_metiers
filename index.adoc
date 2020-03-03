@@ -1,0 +1,37 @@
+= Ingénieur Développeur
+:imagesdir: images
+:source-highlighter: highlightjs
+//beige, black, league, night, serif, simple, sky, solarized, white
+:revealjs_theme: solarized
+//none, fade, slide, convex, concave, zoom
+:revealjs_transition: convex
+:icons: font
+:revealjs_slideNumber: true
+:customcss: custom.css
+
+== Benjamin Garcia
+
+=== Formation icon:school[]
+
+* BAC électronique
+* BTS électronique
+* BAC IRIS
+* Licence informatique
+* Master informatique
+
+=== Expérience icon:building[]
+
+* Esii 
+* Geomatys 
+* Acelys 
+* TellMePlus 
+* Zendesk 
+
+[%notitle]
+=== Zendesk
+
+image::Zendesk.png[size=contain]
+
+=== Question 
+
+
