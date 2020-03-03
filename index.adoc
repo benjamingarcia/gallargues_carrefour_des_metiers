@@ -29,10 +29,12 @@ Benjamin Garcia <benjamin.garcia@zendesk.com>
 * TellMePlus 
 * Zendesk 
 
-[%notitle]
-=== Zendesk
+== Une journée type
 
-image::Zendesk.png[size=contain]
+[%step]
+* les réunions
+* analyser
+* coder
 
 == Question 
 
