@@ -2,6 +2,7 @@
 Benjamin Garcia <benjamin.garcia@zendesk.com>
 :imagesdir: images
 :source-highlighter: highlightjs
+:highlightjs-languages: scala
 //beige, black, league, night, serif, simple, sky, solarized, white
 :revealjs_theme: solarized
 //none, fade, slide, convex, concave, zoom
@@ -27,7 +28,38 @@ Benjamin Garcia <benjamin.garcia@zendesk.com>
 * Geomatys 
 * Acelys 
 * TellMePlus 
-* Zendesk 
+
+[%notitle]
+== Zendesk
+
+image:Zendesk.png[]
+
+=== Gestion de tickets
+
+image:support.png[]
+
+=== Extrait de code
+
+[source, scala]
+----
+  def authorizedTry(host: String): Try[Unit] = {
+    for {
+      ips <- Try(
+        InetAddress.getAllByName(host).collect {
+          case ipV4: Inet4Address => new IPAddressString(ipV4.getHostAddress)
+          case ipV6: Inet6Address => new IPAddressString(ipV6.getHostAddress)
+        }
+      ).recoverWith { case _ => Failure(IpResolutionError()) }
+      shouldWhitelist = ips.forall { ip => WHITELISTED_IPS.exists(_.contains(ip)) }
+      shouldBlacklist = ips.exists { ip => BLACKLISTED_IPS.exists(_.contains(ip)) }
+      _ <- if (!shouldWhitelist && shouldBlacklist) {
+        Failure(new Exception(blacklistedIpErrorMessage))
+      } else {
+        Success(())
+      }
+    } yield ()
+  }
+----
 
 == Une journée type
 
