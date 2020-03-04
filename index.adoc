@@ -38,35 +38,46 @@ image:Zendesk.png[]
 
 image:support.png[]
 
-=== Extrait de code
+=== Analyse de données
 
-[source, scala]
-----
-  def authorizedTry(host: String): Try[Unit] = {
-    for {
-      ips <- Try(
-        InetAddress.getAllByName(host).collect {
-          case ipV4: Inet4Address => new IPAddressString(ipV4.getHostAddress)
-          case ipV6: Inet6Address => new IPAddressString(ipV6.getHostAddress)
-        }
-      ).recoverWith { case _ => Failure(IpResolutionError()) }
-      shouldWhitelist = ips.forall { ip => WHITELISTED_IPS.exists(_.contains(ip)) }
-      shouldBlacklist = ips.exists { ip => BLACKLISTED_IPS.exists(_.contains(ip)) }
-      _ <- if (!shouldWhitelist && shouldBlacklist) {
-        Failure(new Exception(blacklistedIpErrorMessage))
-      } else {
-        Success(())
-      }
-    } yield ()
-  }
-----
+image:dashboards.jpg[]
 
-== Une journée type
+== être développeur
+
+image:https://media.giphy.com/media/13UZisxBxkjPwI/giphy.gif[coder, 600]
+
+=== Une journée type
 
 [%step]
 * les réunions
 * analyser
 * coder
+
+
+[%title]
+=== Extrait de code
+
+[source, kotlin]
+----
+@Controller("/gameCommand")
+class GameCommandController(private val commandBus: CommandBusMiddleware) {
+
+    @Post("/init")
+    @Produces(MediaType.APPLICATION_JSON)
+    fun initGame(@Body initializeGame: InitializeGame): String {
+        val commandResponse =
+                commandBus.dispatch(
+			InitGameCommand(initializeGame.blueUserName, 
+					initializeGame.orangeUserName))
+        return """{"gameId":"${commandResponse.uuid}"}""".trimIndent()
+    }
+
+    @Get("/start")
+    @Produces(MediaType.TEXT_PLAIN)
+    fun startGame(): String {
+        return "Ready !!! 🦊"
+    }
+----
 
 == Question 
 

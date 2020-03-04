@@ -3,3 +3,8 @@
 	   background: none;
 	   box-shadow: none;
     }
+
+.reveal pre code {
+	max-height: 500px;
+}
+
