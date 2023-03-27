@@ -44,7 +44,7 @@ image:dashboards.jpg[]
 
 == être développeur
 
-image:https://media.giphy.com/media/rMS1sUPhv95f2/giphy.gif[coder, 600]
+image:coder.gif[coder, 600]
 
 === Une journée type
 
