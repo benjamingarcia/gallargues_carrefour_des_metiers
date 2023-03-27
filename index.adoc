@@ -2,7 +2,8 @@
 Benjamin Garcia <benjamin.garcia@zendesk.com>
 :imagesdir: images
 :source-highlighter: highlightjs
-:highlightjs-languages: scala
+:highlightjs-languages: kotlin
+:highlightjs-theme: darcula.css 
 //beige, black, league, night, serif, simple, sky, solarized, white
 :revealjs_theme: solarized
 //none, fade, slide, convex, concave, zoom
@@ -62,13 +63,12 @@ image:coder.gif[coder, 600]
 @Controller("/gameCommand")
 class GameCommandController(private val commandBus: CommandBusMiddleware) {
 
+
     @Post("/init")
     @Produces(MediaType.APPLICATION_JSON)
     fun initGame(@Body initializeGame: InitializeGame): String {
         val commandResponse =
-                commandBus.dispatch(
-			InitGameCommand(initializeGame.blueUserName, 
-					initializeGame.orangeUserName))
+                commandBus.dispatch(InitGameCommand(initializeGame.blueUserName, initializeGame.orangeUserName))
         return """{"gameId":"${commandResponse.uuid}"}""".trimIndent()
     }
 
@@ -77,6 +77,8 @@ class GameCommandController(private val commandBus: CommandBusMiddleware) {
     fun startGame(): String {
         return "Ready !!! 🦊"
     }
+}
+
 ----
 
 == Question 

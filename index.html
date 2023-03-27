@@ -395,16 +395,15 @@ link.href = window.location.search.match( /print-pdf/gi ) ? "https://cdn.jsdeliv
 document.getElementsByTagName( 'head' )[0].appendChild( link );</script><link rel="stylesheet" href="custom.css"></head><body><div class="reveal"><div class="slides"><section class="title" data-state="title"><h1>Ingénieur Développeur</h1><p class="author"><small>Benjamin Garcia</small></p></section><section id="_formation"><h2>Formation <span class="icon"><i class="fa fa-school"></i></span></h2><div class="slide-content"><div class="ulist"><ul><li class="fragment"><p>BAC électronique</p></li><li class="fragment"><p>BTS électronique</p></li><li class="fragment"><p>BTS IRIS</p></li><li class="fragment"><p>Licence informatique</p></li><li class="fragment"><p>Master informatique</p></li></ul></div></div></section>
 <section id="_expérience"><h2>Expérience <span class="icon"><i class="fa fa-building"></i></span></h2><div class="slide-content"><div class="ulist"><ul><li class="fragment"><p>Esii</p></li><li class="fragment"><p>Geomatys</p></li><li class="fragment"><p>Acelys</p></li><li class="fragment"><p>TellMePlus</p></li></ul></div></div></section>
 <section><section id="_zendesk"><div class="slide-content"><div class="paragraph"><p><span class="image"><img src="images/Zendesk.png" alt="Zendesk"></span></p></div></div></section><section id="_gestion_de_tickets"><h2>Gestion de tickets</h2><div class="slide-content"><div class="paragraph"><p><span class="image"><img src="images/support.png" alt="support"></span></p></div></div></section><section id="_analyse_de_données"><h2>Analyse de données</h2><div class="slide-content"><div class="paragraph"><p><span class="image"><img src="images/dashboards.jpg" alt="dashboards"></span></p></div></div></section></section>
-<section><section id="_être_développeur"><h2>être développeur</h2><div class="slide-content"><div class="paragraph"><p><span class="image"><img src="https://media.giphy.com/media/rMS1sUPhv95f2/giphy.gif" alt="coder" width="600"></span></p></div></div></section><section id="_une_journée_type"><h2>Une journée type</h2><div class="slide-content"><div class="ulist"><ul><li class="fragment"><p>les réunions</p></li><li class="fragment"><p>analyser</p></li><li class="fragment"><p>coder</p></li></ul></div></div></section><section id="_extrait_de_code"><h2>Extrait de code</h2><div class="slide-content"><div class="listingblock"><div class="content"><pre class="highlightjs highlight"><code class="language-kotlin hljs" data-noescape="true" data-lang="kotlin">@Controller("/gameCommand")
+<section><section id="_être_développeur"><h2>être développeur</h2><div class="slide-content"><div class="paragraph"><p><span class="image"><img src="images/coder.gif" alt="coder" width="600"></span></p></div></div></section><section id="_une_journée_type"><h2>Une journée type</h2><div class="slide-content"><div class="ulist"><ul><li class="fragment"><p>les réunions</p></li><li class="fragment"><p>analyser</p></li><li class="fragment"><p>coder</p></li></ul></div></div></section><section id="_extrait_de_code"><h2>Extrait de code</h2><div class="slide-content"><div class="listingblock"><div class="content"><pre class="highlightjs highlight"><code class="language-kotlin hljs" data-noescape="true" data-lang="kotlin">@Controller("/gameCommand")
 class GameCommandController(private val commandBus: CommandBusMiddleware) {
+
 
     @Post("/init")
     @Produces(MediaType.APPLICATION_JSON)
     fun initGame(@Body initializeGame: InitializeGame): String {
         val commandResponse =
-                commandBus.dispatch(
-			InitGameCommand(initializeGame.blueUserName,
-					initializeGame.orangeUserName))
+                commandBus.dispatch(InitGameCommand(initializeGame.blueUserName, initializeGame.orangeUserName))
         return """{"gameId":"${commandResponse.uuid}"}""".trimIndent()
     }
 
@@ -412,7 +411,8 @@ class GameCommandController(private val commandBus: CommandBusMiddleware) {
     @Produces(MediaType.TEXT_PLAIN)
     fun startGame(): String {
         return "Ready !!! 🦊"
-    }</code></pre></div></div></div></section></section>
+    }
+}</code></pre></div></div></div></section></section>
 <section id="_question"><h2>Question</h2></section></div></div><script src="https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/js/reveal.js"></script><script>Array.prototype.slice.call(document.querySelectorAll('.slides section')).forEach(function(slide) {
   if (slide.getAttribute('data-background-color')) return;
   // user needs to explicitly say he wants CSS color to override otherwise we might break custom css or theme (#226)
@@ -640,9 +640,9 @@ Reveal.addEventListener('ready', function () {
 });
 Reveal.addEventListener('resize', function () {
   layoutSlideContents(960, 700)
-});</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/lib/css/monokai.css"/>
+});</script><link rel="stylesheet" href="darcula.css"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/scala.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/kotlin.min.js"></script>
 
 <script>
 
