@@ -41,7 +41,15 @@ image:support.png[]
 
 === Analyse de données
 
-image:dashboards.jpg[]
+image:datasets.png[]
+
+=== Analyse de données
+
+image:report.png[]
+
+=== Analyse de données
+
+image:dashboard.png[]
 
 == être développeur
 
@@ -50,36 +58,9 @@ image:coder.gif[coder, 600]
 === Une journée type
 
 [%step]
-* les réunions
-* analyser
-* coder
-
-
-[%title]
-=== Extrait de code
-
-[source, kotlin]
-----
-@Controller("/gameCommand")
-class GameCommandController(private val commandBus: CommandBusMiddleware) {
-
-
-    @Post("/init")
-    @Produces(MediaType.APPLICATION_JSON)
-    fun initGame(@Body initializeGame: InitializeGame): String {
-        val commandResponse =
-                commandBus.dispatch(InitGameCommand(initializeGame.blueUserName, initializeGame.orangeUserName))
-        return """{"gameId":"${commandResponse.uuid}"}""".trimIndent()
-    }
-
-    @Get("/start")
-    @Produces(MediaType.TEXT_PLAIN)
-    fun startGame(): String {
-        return "Ready !!! 🦊"
-    }
-}
-
-----
+* les réunions: 60%
+* analyser: 20%
+* coder: 20%
 
 == Question 
 
