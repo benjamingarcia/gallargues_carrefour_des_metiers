@@ -58,10 +58,11 @@ image:coder.gif[coder, 600]
 === Une journée type
 
 [%step]
-* les réunions: 60%
-* analyser: 20%
-* coder: 20%
+* Assister ou animer des réunions: 60%
+* Analyser: 20%
+* Coder: 20%
 
-== Question 
+== Des questions❓
 
+🤔
 
