@@ -5,6 +5,7 @@ Benjamin Garcia <benjamin.garcia@zendesk.com>
 :highlightjs-languages: kotlin
 :highlightjs-theme: darcula.css 
 //beige, black, league, night, serif, simple, sky, solarized, white
+:revealjsdir: https://cdn.jsdelivr.net/npm/reveal.js
 :revealjs_theme: solarized
 //none, fade, slide, convex, concave, zoom
 :revealjs_transition: convex
@@ -16,19 +17,19 @@ Benjamin Garcia <benjamin.garcia@zendesk.com>
 == Formation icon:school[]
 
 [%step]
-* BAC électronique
-* BTS électronique
-* BTS IRIS
-* Licence informatique
-* Master informatique
+* 2001 BAC électronique
+* 2002 BTS électronique
+* 2004 BTS IRIS
+* 2005 Licence informatique
+* 2007 Master informatique
 
 == Expérience icon:building[]
 
 [%step]
-* Esii 
-* Geomatys 
-* Acelys 
-* TellMePlus 
+* 2007-2012 Esii
+* 2012-2015 Geomatys
+* 2015-2017 Acelys
+* 2017-2019 TellMePlus
 
 [%notitle]
 == Zendesk
@@ -53,6 +54,7 @@ image:dashboard.png[]
 
 == être développeur
 
+[%step]
 image:coder.gif[coder, 600]
 
 === Une journée type
