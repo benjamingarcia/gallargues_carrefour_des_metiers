@@ -1,5 +1,5 @@
 = Ingénieur Développeur
-Benjamin Garcia <benjamin.garcia@zendesk.com>
+Benjamin Garcia <benjamin.garcia@pm.me>
 :imagesdir: images
 :source-highlighter: highlightjs
 :highlightjs-languages: kotlin
