@@ -54,9 +54,6 @@ image:dashboard.png[]
 
 == Être développeur
 
-[%step]
-image:coder.gif[coder, 600]
-
 === Une journée type
 
 [%step]
@@ -67,7 +64,7 @@ image:coder.gif[coder, 600]
 === Formations
 
 [%step]
-* les sites en lignes
+* les sites en ligne
 * les conférences
 
 == Des questions❓
