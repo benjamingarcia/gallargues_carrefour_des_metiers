@@ -52,7 +52,7 @@ image:report.png[]
 
 image:dashboard.png[]
 
-== être développeur
+== Être développeur
 
 [%step]
 image:coder.gif[coder, 600]
@@ -63,6 +63,12 @@ image:coder.gif[coder, 600]
 * Assister ou animer des réunions: 60%
 * Analyser: 20%
 * Coder: 20%
+
+=== Formations
+
+[%step]
+* les sites en lignes
+* les conférences
 
 == Des questions❓
 
